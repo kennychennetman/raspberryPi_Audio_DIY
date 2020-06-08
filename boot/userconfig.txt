@@ -1,0 +1,7 @@
+# Add your custom config.txt options to this file, which will be preserved during updates
+dtoverlay=gpio-ir,gpio_pin=26
+#dtoverlay=lirc-rpi,dtparam=gpio_in_pin=26
+gpio=14=op,dh
+dtoverlay=pitft28-resistive, rotate=270 speed=48000000 fps=30
+framebuffer_depth=16
+

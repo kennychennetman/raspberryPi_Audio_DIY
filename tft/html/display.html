@@ -1,0 +1,16 @@
+<html>
+<script 
+src="/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+    window.setInterval(function(){
+        $.get('/run.php', function(data) {
+            $('#content').html(data);
+        });
+    }, 1000);
+});
+</script>
+<body>
+    <div id="content"></div>
+</body>
+</html>

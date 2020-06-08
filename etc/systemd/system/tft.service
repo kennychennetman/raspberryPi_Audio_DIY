@@ -1,0 +1,17 @@
+[Unit]
+Description = for TFT Display
+Wants=volumio.service
+
+[Service]
+ExecStart=/usr/local/bin/node /tft/tft.js >/dev/null
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=tft
+User=volumio
+Group=volumio
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
+
